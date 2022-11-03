@@ -34,22 +34,18 @@ bg-dark {
 .wrapper h2 {
   font-size: 40px;
 }
-
 .wrapper h2.color-red {
   color: var(--color-red);
   cursor: pointer;
   transition: color 0.5s ease-in-out;
 }
-
 .wrapper h2.color-red:hover {
   color: var(--color-green);
 }
-
 .wrapper p:not(.transparent) {
   background-color: bisque;
   color: var(--color-black);
 }
-
 .wrapper p:first-of-type {
   font-size: 1.5em;
 }
