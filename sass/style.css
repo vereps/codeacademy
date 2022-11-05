@@ -14,15 +14,12 @@ bg-dark {
   background-color: var(--color-black);
   color: var(--color-white);
 }
-
 .wrapper {
   padding: var(--sizing-30);
 }
-
 .wrapper.full-width {
   width: 100%;
 }
-
 .wrapper.half-width {
   width: 50%;
 }

@@ -1,0 +1,96 @@
+.hero {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 60% 40%;
+    padding-bottom: 16px;
+    margin-top: 31px;
+    margin-left: 24px;
+    margin-right: 24px;
+    overflow: hidden;
+}
+.heros-text {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+    max-width: calc(90%);
+    margin-right: 20px;
+    .name {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #FF3998;
+        padding-bottom: 16px;
+    }
+    .name1 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 44px;
+        color: #111111;
+    }
+    .name2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14.9984px;
+        line-height: 150%;
+        color: #555555;
+        padding-bottom: 36px;
+    }
+    .button {
+        font-family: 'Inter';
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 150%;
+        text-align: center;
+        color: #111111;
+        box-sizing: border-box;
+        border: 2.99967px solid #FF3998;
+        border-radius: 75px;
+        padding-left: 42px;
+        padding-right: 42px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+.heros-img {
+    height: 310px;
+    margin-left: 20px;
+}
+@include xl {
+    .hero {
+        grid-template-columns: 50% 50%;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 182px;
+    }
+    .heros-text {
+        width: 100%;
+       .name {
+            font-size: 16px;
+            line-height: 19px;
+        }
+        .name1 {
+            font-size: 96px;
+            font-weight: 900;
+            line-height: 116px;
+        }
+        .name2 {
+            font-size: 20px;
+        }
+        .button{
+            font-size: 20px;
+        }
+    }
+    .heros-img {
+        height: 519px;
+        overflow: hidden;
+        padding-left: 146px;
+    }
+}
