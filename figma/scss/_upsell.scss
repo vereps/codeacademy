@@ -1,13 +1,15 @@
 .upsell {
     display: flex;
     flex-direction: column;
-    background-color: $color-FF3998;
+    background: url(images/upsell.svg);
+    // background-color: $color-FF3998;
     font-family: 'Inter';
     @include xl {
         border: 0px solid $color-111111;
         border-radius: 16px;
     }
     .upsells {
+        
         font-weight: 500;
         font-size: 30px;
         line-height: 36px;

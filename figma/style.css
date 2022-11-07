@@ -202,7 +202,7 @@ body {
 .upsell {
   display: flex;
   flex-direction: column;
-  background-color: #FF3998;
+  background: url(images/upsell.svg);
   font-family: "Inter";
 }
 @media (min-width: 1200px) {
