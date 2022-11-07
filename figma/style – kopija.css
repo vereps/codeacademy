@@ -503,7 +503,7 @@ body {
 }
 @media (min-width: 1200px) {
   .footer-upsell .footer-upsell-text {
-    width: 50%;
+    width: 60%;
   }
 }
 .footer-upsell .footer-upsell-text .name {
@@ -574,6 +574,7 @@ body {
   .footer-upsell .footer-upsell-img {
     display: flex;
     justify-content: center;
+    width: 40%;
   }
 }
 
