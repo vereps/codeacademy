@@ -169,6 +169,7 @@ body {
   }
 }
 .hero .heros-text .button {
+  text-decoration: none;
   font-weight: 600;
   font-size: 15px;
   line-height: 150%;
@@ -547,6 +548,7 @@ body {
   }
 }
 .footer-upsell .footer-upsell-text .button {
+  text-decoration: none;
   font-weight: 600;
   font-size: 15px;
   line-height: 150%;
