@@ -1,165 +1,141 @@
 .showcase {
     display: flex;
     flex-direction: column;
-    margin-left: 24px;
-    margin-right: 24px;
     padding-top: 41px;
-    overflow: hidden;
-}
-.showcase-name {
     font-family: 'Inter';
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 36px;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 13px;
-}
-.showcase-text
-    a {
-        font-family: 'Inter';
+    overflow: hidden;
+    .showcase-name {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 36px;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 13px;
+        @include xl {
+            font-size: 40px;
+            line-height: 48px;
+        }
+    }
+    .showcase-text,
+    .showcase-text a {
         font-weight: 400;
-        font-size: 15px;
+        font-size: 20px;
         line-height: 150%;
         color: #555555;
     }
-.showcases {
-    display: flex;
-    max-width: 100%;
-    gap: 30px;
-    padding-top: 31px;
-}
-.showcases-item {
-    display: flex;
-    flex-direction: column;
-    border: 0 solid;
-    border-radius: 12px;
-    min-width: 217px;
-    background-color: #EEEEEE;
-}
-.showcases-images
-    .small {
-        width: 100%;
-        height: 208px;
-        object-fit: cover;
-        object-position: 0 0;
-        border-radius: 12px 12px 0 0 ;
-    }
-.showcases-description {
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 10;
-    .child {
-        display: flex;
-        flex-direction: column;
-        gap: 9px;
-        margin-left: 18px;
-        justify-content: center;
-        margin-top: 18px;
-        margin-bottom: 18px;
-        .childs-series {
-            font-family: 'Inter';
-            font-weight: 500;
-            font-size: 9px;
-            line-height: 100%;
-            text-transform: uppercase;
-            color: #FF8139;
-        }
-        .childs-name, .childs-eth {
-            display: flex;
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 100%; 
-            img {
-                margin-right: 5px;
-            }   
-        }
-        .childs-nr, .childs-day {
-            font-family: 'Inter';
-            font-weight: 400;
-            font-size: 13px;
-            line-height: 100%;
-            color: #777777;
-        }
-        .childs-top {
-            font-family: 'Inter';
-            font-weight: 500;
-            font-size: 9px;
-            line-height: 100%;
-            text-transform: uppercase;
-            color: #777777;
-        }
-        .childs-top, .childs-eth, .childs-day {
-            text-align: end;
-        }
-    }
-}
-@include xl {
-    .showcase {
-        margin-left: 80px;
-        margin-right: 80px;
-    }
-    .showcase-name {
-        font-size: 40px;
-        line-height: 48px;
-    }
-    .showcase-text {
-        font-size: 20px;
-        a {
-            font-size: 20px;
-            font-weight: 400;
-        }
-    }
     .showcases {
-        gap: 40px;
-        padding-top: 56px;
-        :nth-child(1n + 3) {
-            display: grid;
-        }
-    }
-    .showcases-item {
-        border-radius: 16px;
-        max-width: 290px;
-    }
-    .showcases-images {
-        .small {
-            height: 278px;
-            border-radius: 16px 16px 0 0 ;
-        }
-    }
-    .showcases-description {
-        align-content: stretch;
-        width: 100%;
-        .child {
-            justify-content: space-between;
-            width: calc(50% - 24px);
-            gap: 12px;
-            margin-left: 12px;
-            margin-right: 12px;
-            .childs-series {
-                font-size: 12px;
+        display: flex;
+        max-width: 100%;
+        gap: 30px;
+        padding-top: 31px;
+        @include xl {
+            gap: 40px;
+            padding-top: 56px;
+            :nth-child(1n + 3) {
+                display: grid;
             }
-            .childs-name {
-                font-size: 20px;
-                margin-left: 0px;
+        }
+        .showcases-item {
+            display: flex;
+            flex-direction: column;
+            border: 0 solid;
+            border-radius: 12px;
+            min-width: 217px;
+            background-color: $color-EEEEEE;
+            @include xl {
+                border-radius: 16px;
+                max-width: 290px;
             }
-            .childs-eth {
-                font-size: 20px;
-                margin-left: -10px;
-                img {
-                    margin-right: 8px;
+            .small {
+                width: 100%;
+                height: 208px;
+                object-fit: cover;
+                object-position: 0 0;
+                border-radius: 12px 12px 0 0 ;
+                @include xl {
+                    height: 278px;
+                    border-radius: 16px 16px 0 0 ;
                 }
             }
-            childs-nr, .childs-day {
-            font-size: 18px;
-            }
-            .childs-top {
-                font-size: 12px;
-            }
-            .childs-top, .childs-eth, .childs-day {
-                text-align: end;
+            .showcases-description {
+                display: flex;
+                flex-wrap: wrap;
+                z-index: 10;
+                @include xl {
+                    align-content: stretch;
+                    width: 100%;
+                }
+                .child {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
+                    margin-left: 18px;
+                    justify-content: center;
+                    margin-top: 18px;
+                    margin-bottom: 18px;
+                    @include xl {
+                        justify-content: space-between;
+                        width: calc(50% - 24px);
+                        gap: 12px;
+                        margin-left: 12px;
+                        margin-right: 12px;
+                    }
+                    .childs-series {
+                        font-weight: 500;
+                        font-size: 9px;
+                        line-height: 100%;
+                        text-transform: uppercase;
+                        color: $color-FF8139;
+                        @include xl {
+                            font-size: 12px;
+                        }
+                    }
+                    .childs-name,
+                    .childs-eth {
+                        display: flex;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 100%; 
+                        @include xl {
+                            font-size: 17px;
+                            margin-left: 0px;
+                        }
+                        img {
+                            margin-right: 5px;
+                            @include xl {
+                                margin-right: 8px;
+                            }
+                        }   
+                    }
+                    .childs-eth {
+                        @include xl {
+                            justify-content: end;
+                        }
+                    }
+                    .childs-nr,
+                    .childs-day {
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 100%;
+                        color: $color-777777;
+                        @include xl {
+                            font-size: 18px;
+                        }
+                    }
+                    .childs-top {
+                        font-weight: 500;
+                        font-size: 9px;
+                        line-height: 100%;
+                        text-transform: uppercase;
+                        color: $color-777777;
+                        @include xl {
+                            font-size: 12px;
+                        }
+                    }
+                    .childs-top, .childs-eth, .childs-day {
+                        text-align: end;
+                    }
+                }
             }
         }
     }

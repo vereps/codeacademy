@@ -1,5 +1,16 @@
 .container {
     max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto 24px auto 24px;
+    @include md {
+        margin: auto 34px auto 34px;
+    }   
+    @include lg {
+        margin: auto 60px auto 60px;
+    }
+    @include xl {
+        margin: auto 80px auto 80px;
+    }
+    @include xxl {
+        margin: auto 100px auto 100px;
+    }
 }

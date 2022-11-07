@@ -2,147 +2,127 @@
     display: flex;
     flex-direction: column;
     margin-top: 24px;
-    margin-left: 24px;
-    margin-right: 24px;
-    .text1 {
-        font-family: 'Inter';
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 100%;
-        color: #555555;
-        padding-top: 22px;
-    }
-}
-.footers {
-    display: flex;
-    flex-wrap: wrap;
-    &.name {
-        font-family: 'Varela Round';
-        font-weight: 400;
-        font-size: 31px;
-        line-height: 25px;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.05em;
-        color: #111111;
-        margin-left: 5px;
-    }
-}
-.society {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding-top: 24px;
-}
-.footer-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    .child
-        :nth-child(1) {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;    
-        }
-    ul {
-        padding-inline-start: 0;
-        li {
-            width: 150px;
-            list-style: none;
-            margin-top: 10px;
-            &.names {
-                font-family: 'Inter';
-                font-weight: 700;
-                font-size: 12px;
-                line-height: 15px;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                color: #555555;
-            }
-            &.list {
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 15px;
-                line-height: 100%;
-                color: #555555;
-            }
-        }
-    }
-}
-.footer-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .copyright {
-        font-family: 'Inter';
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 100%;
-        color: #999999;
-        padding-top: 48px;
-        padding-bottom: 79px;
-    }
-    .launching {
-        font-family: 'Inter';
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 100%;
-        color: #999999;
-        text-align: right;
-    }
-}
-@include xl {
-    .footer {
+    @include xl {
         flex-wrap: wrap;
-        margin-left: 80px;
-        margin-right: 80px;
     }
     .footer-block {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        @include lg {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .footer-left {
+            @include lg {
+                width: 30%;
+            }
+            .footers {
+                display: flex;
+                flex-wrap: wrap;
+                .name {
+                    font-family: 'Varela Round';
+                    font-weight: 400;
+                    font-size: 21px;
+                    line-height: 25px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.05em;
+                    color: $color-111111;
+                    margin-left: 5px;
+                    @include xl {
+                        font-size: 38px;
+                        line-height: 34px;
+                    }
+                }
+            }
+            .text1 {
+                font-family: 'Inter';
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 100%;
+                color: $color-555555;
+                padding-top: 22px;
+                @include xl {
+                    font-size: 20px;
+                }
+            }
+            .society {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                padding-top: 24px;
+            }
+        }
+        .footer-right {
+            display: flex;
+            justify-content: center;
+            @include lg {
+                justify-content: space-around;
+                width: 70%;
+            }
+            .footer-menu {
+                display: flex;
+                flex-wrap: wrap;
+                aling-content: space-between;
+                ul {
+                    padding-inline-start: 20px;
+                    @include xl {
+                        padding-inline-start: 10px;
+                    }
+                    &.child{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    li {
+                        width: 150px;
+                        list-style: none;
+                        margin-top: 10px;
+                        font-family: 'Inter';
+                        @include xl {
+                            margin-top: 10px;
+                        }
+                        &.names {
+                            font-weight: 700;
+                            font-size: 12px;
+                            line-height: 15px;
+                            letter-spacing: 0.1em;
+                            text-transform: uppercase;
+                            color: $color-555555;
+                            @include xl {
+                                font-size: 16px;
+                                line-height: 19px;
+                            }
+                        }
+                        &.list {
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 100%;
+                            color: $color-555555;
+                            @include xl {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-    .footer-left {
-        width: 35%;
-    }
-    .footer-right {
+    .footer-bottom {
         display: flex;
-        justify-content: flex-end;
-        width: 65%;
-    }
-    .footers .name {
-        font-size: 48px;
-        line-height: 34px;
-    }
-    .footer .text1 {
-        font-size: 20px;
-    }
-    .footer-menu {
-        align-content: flex-start;
-    }
-    .footer-menu ul {
-        padding-inline-start: 10px;
-    }
-    .footer-menu ul li {
-        margin-top: 10px;
-    }
-    li.names {
-        font-size: 16px;
-        line-height: 19px;
-    }
-    li.list {
-        font-size: 20px;
-    }
-    .copyright {
-        font-size: 20px;
-        padding-top: 0px;
-    }
-    .launching {
-        font-family: 'Inter';
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 100%;
-        text-align: right;
-        color: #999999;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 48px;
+        margin-bottom: 79px;
+        .copyright, .launching {
+            font-family: 'Inter';
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 100%;
+            color: $color-999999;
+            @include xl {
+                font-size: 20px;
+            }
+        }
     }
 }
