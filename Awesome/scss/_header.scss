@@ -1,0 +1,57 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 32px 0 32px;
+    width: 100%;
+    align-items: center;
+    .logo-text {
+        margin-left: 8px;
+    }
+    .menu-small {
+        margin-left: auto; 
+        margin-right: 32px;
+        @include md {
+            display: none;
+        }
+    }
+    .header-menu {
+        display: none;
+        @include md {
+            display: flex;            
+            flex-wrap: wrap;
+            gap: 48px;
+            margin-left: auto;
+            margin-right: 32px;
+            .menu-top {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                a {
+                    font-family: 'Avenir Next';
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-feature-settings: 'liga' off;
+                    color: #333333;
+                    text-decoration: none;
+                }
+            }
+            .menu-top-register {
+                left: calc(50% - 93px/2 + 533.5px);
+                top: calc(50% - 40px/2 - 1966px);
+                background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%), linear-gradient(102.3deg, #0BB1E3 -4.62%, #0F2976 178.22%), #0E70AF;
+                border-radius: 3px;
+                display: flex;
+                a {
+                    font-family: 'Avenir Next';
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-feature-settings: 'liga' off;
+                    color: #FEFEFE;
+                    margin: 10px 15px;
+                }
+            }
+        }
+    }
+}

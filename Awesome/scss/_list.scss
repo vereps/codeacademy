@@ -1,0 +1,35 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 62px;
+    margin-left: 32px;
+    margin-right: 32px;
+    gap: 10px;
+    .lists {
+        &:nth-child(1n + 1) {
+            background: #FFFFFF;
+            padding: 22px;
+            width: 155px;
+            .tipe {
+                font-family: 'Avenir Next';
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 116%;
+                color: #333333;
+            }
+            .description {
+                font-family: 'Avenir Next';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 8px;
+                line-height: 132%;
+                letter-spacing: 0.04em;
+                color: #4F4F4F;
+            }
+        }
+        &:nth-child(1) {
+            box-shadow: 0px 3.16301px 16.8694px rgba(155, 148, 148, 0.17);
+            border-radius: 4.30753px;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.block2 {
+    margin-left: 32px;
+    margin-right: 32px;
+    .blocks {
+        .text, .text1 {
+            font-family: 'Avenir Next';
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .text {
+            font-size: 13px;
+            line-height: 18px;
+            color: #F3B562;
+        }
+        .text1 {
+            font-size: 20px;
+            line-height: 110%;
+            color: #647B64;
+            margin-bottom: 12px;
+        }
+    }
+    .block-list2 {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 17px;
+        overflow: hidden;
+        margin-bottom: 64px;
+        .child {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 50% 50%;
+            width: 243px;
+            background: linear-gradient(358.27deg, rgba(100, 123, 100, 0.77) -118.86%, rgba(100, 123, 100, 0) 25.62%, rgba(100, 123, 100, 0) 98.53%), #FFFFFF;
+            border-radius: 5.18621px;
+            &:nth-child(1n + 1) {
+                .image {
+                    grid-area: 1 / 1 / 3 / 2;
+                    img {
+                        width: 105px;
+                    }
+                }
+
+                .name {
+                    grid-area: 1 / 2 / 2 / 3;
+                    font-size: 12px;
+                    line-height: 116%;
+                    color: #333333;
+                    margin-left: 10px;
+                }
+                .name1 {
+                    grid-area: 2 / 2 / 3 / 3;
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 132%;
+                    letter-spacing: 0.04em;
+                    color: #4F4F4F;
+                }
+                p {
+                    margin-block-start: 0px;
+                    margin-block-end: 0px;
+                }
+                .description {
+                    grid-area: 3 / 1 / 4 / 3;
+                    font-style: italic;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 132%;
+                    letter-spacing: 0.04em;
+                    color: #4F4F4F;
+                }
+            }
+        }
+    }
+}
