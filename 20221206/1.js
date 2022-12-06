@@ -41,3 +41,12 @@
 // Naudokite: ternary operator ?
 function checkAge(age) {return age > 18 ? true : `Did parents allow you?`;};
 console.log(checkAge(43));
+// -------3-----------
+// Parašykite „JavaScript“ funkciją, kuri grąžina perduotą eilutę su raidėmis abėcėlės tvarka.
+console.assert(alphabetOrder('alphabetical') == 'aaabcehillpt');
+
+function alphabetOrder(word){
+    return word.split("").sort().join("").toLowerCase();
+}
+console.log(alphabetOrder(`Naujas miestas`));
+// console.assert(alphabetOrder('alphabetical') == 'aaabcehillpt');
