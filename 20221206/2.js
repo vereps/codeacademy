@@ -89,7 +89,7 @@ let objectColor = {
 for (let i = 0; i < Object.keys(objectColor).length; i++) {
     let names = Object.keys(objectColor)[i];
     let solary = Object.values(objectColor)[i];
-    // console.log(`${names} ${solary}`);
+    console.log(`${names} ${solary}`);
 };
 console.log(`-------task13-----------`);
 // Sukurkite objektą su raktais Mantas, Paulius, Mindaugas ir reikšmėm 200, 300, 300. Parodykite eilutes tokiu formatu: Mantas - 200 EU atlyginimas.
@@ -99,11 +99,11 @@ let objectSolary = {
     Mindaugas: 300,
 }
 for (const property in objectSolary) {
-    // console.log(`${property} - ${objectSolary[property]} EU atlyginimas`);
+    console.log(`${property} - ${objectSolary[property]} EU atlyginimas`);
 };
 console.log(`-------task14-----------`);
 // Sukurkite objektą su savaitės dienomis. Raktai jame turėtų būti dienų skaičiai nuo savaitės pradžios (1 -> pirmadienis ir t.t.). Parodykite dabartinę savaitės dieną.
-const d = new Date("2022-12-07");
+const today = new Date('2022-12-07');
 let weekDaysObjects = {
     1: 'Pirmadienis',
     2: 'Antardienis',
@@ -113,5 +113,5 @@ let weekDaysObjects = {
     6: 'Šeštadienis',
     7: 'Sekamdienis',
 };
-let day = weekDaysObjects[d.getDay()];
-// console.log(`Dabartinė savaitės diena: ${day}`);
+let day = weekDaysObjects[today.getDay()];
+console.log(`Dabartinė savaitės diena: ${day}`);
