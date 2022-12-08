@@ -111,7 +111,7 @@ let weekDaysObjects = {
     4: 'Ketvirtadienis',
     5: 'Penktadienis',
     6: 'Šeštadienis',
-    7: 'Sekamdienis',
+    0: 'Sekamdienis',
 };
 let day = weekDaysObjects[today.getDay()];
 console.log(`Dabartinė savaitės diena: ${day}`);
