@@ -15,12 +15,10 @@ div.appendChild(p) + "\n";
 console.log(p);
 // <ul> tag’as, kurio viduje yra vienas <li>;
 
-var test = document.createElement('section');
-test.setAttribute('id', 'test');
-var ul = document.createElement('ul');
-document.body.appendChild(test);
-test.appendChild(ul);
-var li = document.createElement('li');
+let ul = document.createElement('ul');
+document.body.appendChild(main);
+main.appendChild(ul);
+let li = document.createElement('li');
 ul.appendChild(li);
 li.innerHTML = "li tag’as su tekstu";
 console.log(li);
