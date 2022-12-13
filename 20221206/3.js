@@ -35,6 +35,6 @@ console.log(`---task3----`);
 // Parašykite JavaScript kodą, kuris rodytu lango plotį ir aukštį H1 elemente (kiekvieną kartą kai keičiamas lango dydis skaičiai atsinaujina)
 let h1Element = document.querySelector('h1');
 let btn1 = document.getElementById('btn1');
-btn1.addEventListener("click", function () {
+btn1.addEventListener("click", () => {
     h1Element.textContent = `Lango plotis: ${window.innerWidth} px ir aukštis ${window.innerHeight} px.`;
 });
