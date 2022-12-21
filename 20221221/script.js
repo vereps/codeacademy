@@ -4,3 +4,5 @@ const systemCpuCores = os.cpus();
 const cpuName = os.cpus()[0].model;
 const numOfCpus = os.cpus().length
 console.log(`${cpuName} Branduoliu: ${numOfCpus}`);
+
+
