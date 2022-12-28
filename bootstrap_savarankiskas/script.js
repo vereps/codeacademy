@@ -1,6 +1,6 @@
-const alertButton = document.getElementById('btn-alert');
+const myAlert = document.getElementById('btn-alert');
 let alertText = 'Hello World!';
-alertButton.addEventListener('click', () => { alert(`${alertText}`) });
+myAlert.addEventListener('click', () => { alert(`${alertText}`) });
 
 let inputText = document.getElementById('input-text');
 document.getElementById('btn-to-upper-case').addEventListener('click', () => {
@@ -40,30 +40,14 @@ function phoneValidation(phone) {
 function emailPhoneValidation(email, phone) {
     if (!emailValidation(email) && !phoneValidation(phone)) {
         return document.querySelectorAll('.validation').forEach(element => { element.classList.add("is-invalid") });
-
-    } else if (!!emailValidation(email) && !!phoneValidation(phone)) {
-        return document.querySelectorAll('.validation').forEach(element => { element.classList.remove("is-invalid") });
-
     } else if (!emailValidation(email) && !!phoneValidation(phone)) {
-        return email.classList.add("is-invalid") && phone.classList.remove("is-invalid");
-
+        return email.classList.add("is-invalid");
     } else if (!!emailValidation(email) && !phoneValidation(phone)) {
-        return email.classList.remove("is-invalid") && phone.classList.add("is-invalid");
+        return phone.classList.add("is-invalid");
+    } else {
+        return document.querySelectorAll('.validation').forEach(element => { element.classList.remove("is-invalid") });
     }
 }
-
-// function emailPhoneValidation(email, phone) {
-//     if (!emailValidation(email) && !phoneValidation(phone)) {
-//         return document.querySelectorAll('.validation').forEach(element => { element.classList.add("is-invalid") });
-
-//     } else if (!emailValidation(email) && !!phoneValidation(phone)) {
-//         return phone.classList.remove("is-invalid");
-//     } else if (!!emailValidation(email) && !phoneValidation(phone)) {
-//         return email.classList.remove("is-invalid");
-//     } else {
-//         return document.querySelectorAll('.validation').forEach(element => { element.classList.remove("is-invalid") })
-//     }
-// }
 
 let inputToBlock = document.getElementById("input-block");
 const blockInputButton = document.getElementById("btn-block");
@@ -82,7 +66,6 @@ image.addEventListener('mouseover', function () {
 image.addEventListener('mouseout', function () {
     image.src = "/images/PLDVxza.jpg"
 })
-
 
 let myFigure = document.getElementById("my-figure");
 let borderList = document.getElementById("border-list");
