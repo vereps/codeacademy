@@ -13,22 +13,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nonamez/CAFS3.git"
+    "url": "git+https://github.com/vereps/codeacademy.git"
   },
-  "author": "hello@nonamez.name",
+  "author": "hello@vereps.name",
   "license": "Beerware",
   "bugs": {
-    "url": "https://github.com/nonamez/CAFS3/issues"
+    "url": "https://github.com/vereps/codeacademy/issues"
   },
-  "homepage": "https://github.com/nonamez/CAFS3#readme",
+  "homepage": "https://github.com/vereps/codeacademy#readme",
   "dependencies": {
     "bootstrap": "^5.2.3",
     "cookie-parser": "^1.4.6",
     "cross-env": "^7.0.3",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "lodash.debounce": "^4.0.8",
     "morgan": "^1.10.0",
-    "request": "git+https://github.com/nonamez/request.git"
+    "request": "git+https://github.com/vereps/request.git"
   },
   "devDependencies": {
     "laravel-mix": "^6.0.6",
