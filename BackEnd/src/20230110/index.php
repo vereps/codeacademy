@@ -10,6 +10,7 @@
 // $output = PHP_OS;
 // echo "<pre>{$output}</pre>";
 // echo PHP_OS;
-
+// https://www.cyberciti.biz/faq/how-to-check-os-version-in-linux-command-line/
 $os = `cat /etc/os-release`;
 echo "{$os}";
+
