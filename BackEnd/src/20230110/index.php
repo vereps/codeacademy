@@ -7,5 +7,5 @@
 // Panaudojus "Execution operator" parodykite opėracinės sistemos informaciją, kurioje veikia PHP
 // echo PHP_OS;
 
-$output = PHP_OS;
+$output = 'cat /etc/os-release';
 echo "<pre>$output</pre>";
